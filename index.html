@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Meu Treino">
+  <title>Meu Treino</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>🏋️ Meu Treino</h1>
+  </header>
+
+  <main>
+    <section id="aba-hoje" class="aba ativa"></section>
+    <section id="aba-fichas" class="aba"></section>
+    <section id="aba-calendario" class="aba"></section>
+  </main>
+
+  <!-- Temporizador de descanso (fixo, visível em todas as abas) -->
+  <div id="timer" class="timer">
+    <button class="tbtn" data-acao="menos" aria-label="Diminuir 15 segundos">−15</button>
+    <button id="timer-display" class="tdisplay" data-acao="toggle" aria-label="Iniciar ou pausar">0:30</button>
+    <button class="tbtn" data-acao="mais" aria-label="Aumentar 15 segundos">+15</button>
+    <button class="tbtn tbtn-reset" data-acao="reset" aria-label="Zerar">↺</button>
+  </div>
+
+  <nav class="abas">
+    <button data-aba="hoje" class="ativa">📋<span>Treino</span></button>
+    <button data-aba="fichas">🗂️<span>Fichas</span></button>
+    <button data-aba="calendario">📅<span>Gabarito</span></button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
